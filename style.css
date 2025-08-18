@@ -280,6 +280,43 @@ img, video {
     padding-top: 20px;
 }
 
+/* --- Footer Link Styling --- */
+.footer-contact a {
+    color: inherit; /* This makes the link color the same as the text (white) */
+    text-decoration: none; /* This removes the underline */
+    transition: text-decoration 0.3s;
+}
+
+.footer-contact a:hover {
+    text-decoration:underline; /* Adds an underline when you hover, showing it's clickable */
+}
+
+/* --- Floating WhatsApp Icon --- */
+
+.whatsapp-float {
+    position: fixed; /* The magic to make it stick */
+    width: 60px;
+    height: 60px;
+    bottom: 25px; /* Distance from the bottom */
+    right: 15px; /* Distance from the right */
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: #FFF;
+    border-radius: 50%; /* Makes it a circle */
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Gives it a floating effect */
+    z-index: 1000; /* Ensures it's above everything else */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Removes underline from the link */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
 /* --- Media Queries for Responsiveness (Tablet & Desktop) --- */
 
 @media (min-width: 768px) {
