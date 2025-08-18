@@ -1,377 +1,423 @@
 /* --- Global Styles & Variables --- */
 :root {
-    --primary-brown: #4a2c2a;
-    --secondary-beige: #f5f0e6;
-    --accent-gold: #c5a47e;
-    --text-light: #ffffff;
-    --text-dark: #333333;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Lato', sans-serif;
+  --primary-brown: #4a2c2a;
+  --secondary-beige: #f5f0e6;
+  --accent-gold: #c5a47e;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-body);
-    color: var(--text-dark);
-    background-color: var(--secondary-beige);
-    line-height: 1.6;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--secondary-beige);
+  line-height: 1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 30px 0;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
-
-h1, h2 {
-    font-family: var(--font-heading);
-    color: var(--primary-brown);
-    margin-bottom: 20px;
-    text-align: center;
+h1,
+h2 {
+  font-family: var(--font-heading);
+  color: var(--primary-brown);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 h2 {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
 }
 
 p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-img, video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button {
-    display: inline-block;
-    background-color: var(--accent-gold);
-    color: var(--text-light);
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  background-color: var(--accent-gold);
+  color: var(--text-light);
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #b3916c;
-    transform: translateY(-2px);
+  background-color: #b3916c;
+  transform: translateY(-2px);
 }
 
 /* --- Section Layouts --- */
 .section-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
 }
 
 /* --- 1. Hero Section --- */
 .hero-section {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/hero-background.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--text-light);
-    padding: 20px;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/hero-background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: 20px;
 }
 /* ADDED: Styles for the new logo */
 .hero-logo img {
-    max-width: 150px; /* Controls the logo size on mobile */
-    margin-bottom: 25px; /* Adds space between the logo and the headline */
+  max-width: 150px; /* Controls the logo size on mobile */
+  margin-bottom: 25px; /* Adds space between the logo and the headline */
 }
 .hero-content h1 {
-    font-size: 2.5rem;
-    color: var(--text-light);
-    margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
 }
 
 .hero-content .tagline {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 
 /* --- 2. Brand Story Section --- */
 .story-text {
-    text-align: center;
+  text-align: center;
 }
 
 /* --- 3. Features Section --- */
 .features-section {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .features-list {
-    list-style: none;
-    text-align: left;
+  list-style: none;
+  text-align: left;
 }
 
 .features-list li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
 }
 
 .features-list i {
-    color: var(--accent-gold);
-    margin-right: 10px;
+  color: var(--accent-gold);
+  margin-right: 10px;
 }
 
 /* --- 4. Offer Section --- */
 .offer-section {
-    background-color: var(--primary-brown);
-    color: var(--text-light);
-    text-align: center;
+  background-color: var(--primary-brown);
+  color: var(--text-light);
+  text-align: center;
 }
 
 .offer-section h2 {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 
 .offer-section .mrp {
-    font-size: 1.2rem;
-    opacity: 0.8;
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 .offer-section .price {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .offer-section .price span {
-    color: var(--accent-gold);
-    font-size: 2.8rem;
+  color: var(--accent-gold);
+  font-size: 2.8rem;
 }
 
 .offer-perks {
-    list-style: none;
-    margin-bottom: 30px;
+  list-style: none;
+  margin-bottom: 30px;
 }
 .offer-perks li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
+
+/* --- New Experience / Gallery Section --- */
+
+.experience-section {
+  background-color: #fff; /* A clean white background for this section */
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: -15px auto 40px auto;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+  gap: 15px;
+}
+
+.image-gallery a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the space without distortion */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery a:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
 /* --- 5. Order Form Section --- */
 .form-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .payment-instructions {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
 }
-.payment-instructions h3, #ganji-order-form h3 {
-    font-family: var(--font-heading);
-    margin-bottom: 20px;
+.payment-instructions h3,
+#ganji-order-form h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
 }
 .qr-code {
-    max-width: 200px;
-    margin: 20px auto;
-    display: block;
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
 }
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: var(--font-body);
-    font-size: 1rem;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-size: 1rem;
 }
-.form-group input:focus, .form-group textarea:focus {
-    outline: 2px solid var(--accent-gold);
-    border-color: var(--accent-gold);
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--accent-gold);
+  border-color: var(--accent-gold);
 }
 .submit-button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 50px;
-    background-color: var(--primary-brown);
-    color: var(--text-light);
-    font-size: 1.2rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--primary-brown);
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .submit-button:hover {
-    background-color: #3a2220;
+  background-color: #3a2220;
 }
 #form-status {
-    text-align: center;
-    margin-top: 15px;
-    font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 700;
 }
 
 /* --- 6. Trust Section --- */
 .testimonials {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .testimonial-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 .testimonial-card i {
-    font-size: 2rem;
-    color: var(--accent-gold);
-    margin-bottom: 15px;
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 15px;
 }
 
 /* --- 7. Footer Section --- */
 .footer-section {
-    background-color: var(--primary-brown);
-    color: var(--text-light);
-    text-align: center;
-    padding: 40px 20px;
+  background-color: var(--primary-brown);
+  color: var(--text-light);
+  text-align: center;
+  padding: 40px 20px;
 }
 .footer-section h3 {
-    font-family: var(--font-heading);
-    margin-bottom: 20px;
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
 }
 .footer-contact p {
-    margin-bottom: 10px;
-    opacity: 0.9;
+  margin-bottom: 10px;
+  opacity: 0.9;
 }
 .footer-social {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 .footer-social a {
-    color: var(--text-light);
-    font-size: 1.5rem;
-    margin: 0 15px;
-    transition: color 0.3s;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.3s;
 }
 .footer-social a:hover {
-    color: var(--accent-gold);
+  color: var(--accent-gold);
 }
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
 }
 
 /* --- Footer Link Styling --- */
 .footer-contact a {
-    color: inherit; /* This makes the link color the same as the text (white) */
-    text-decoration: none; /* This removes the underline */
-    transition: text-decoration 0.3s;
+  color: inherit; /* This makes the link color the same as the text (white) */
+  text-decoration: none; /* This removes the underline */
+  transition: text-decoration 0.3s;
 }
 
 .footer-contact a:hover {
-    text-decoration:underline; /* Adds an underline when you hover, showing it's clickable */
+  text-decoration: underline; /* Adds an underline when you hover, showing it's clickable */
 }
 
 /* --- Floating WhatsApp Icon --- */
 
 .whatsapp-float {
-    position: fixed; /* The magic to make it stick */
-    width: 60px;
-    height: 60px;
-    bottom: 25px; /* Distance from the bottom */
-    right: 15px; /* Distance from the right */
-    background-color: #25D366; /* Official WhatsApp Green */
-    color: #FFF;
-    border-radius: 50%; /* Makes it a circle */
-    text-align: center;
-    font-size: 35px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Gives it a floating effect */
-    z-index: 1000; /* Ensures it's above everything else */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none; /* Removes underline from the link */
-    transition: transform 0.3s ease;
+  position: fixed; /* The magic to make it stick */
+  width: 60px;
+  height: 60px;
+  bottom: 25px; /* Distance from the bottom */
+  right: 15px; /* Distance from the right */
+  background-color: #25d366; /* Official WhatsApp Green */
+  color: #fff;
+  border-radius: 50%; /* Makes it a circle */
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Gives it a floating effect */
+  z-index: 1000; /* Ensures it's above everything else */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Removes underline from the link */
+  transition: transform 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 /* --- Media Queries for Responsiveness (Tablet & Desktop) --- */
 
 @media (min-width: 768px) {
-    h2 { font-size: 2.8rem; }
-    .hero-content h1 { font-size: 3.5rem; }
+  h2 {
+    font-size: 2.8rem;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
 
-    /* ADDED: Makes the logo slightly larger on bigger screens */
-    .hero-logo img {
-        max-width: 180px;
-    }
-    .section-layout {
-        flex-direction: row;
-        text-align: left;
-    }
-    .section-layout > div {
-        flex: 1;
-    }
-    .section-layout.reverse {
-        flex-direction: row-reverse;
-    }
-    .story-text, .features-text {
-        text-align: left;
-    }
-    .story-text h2, .features-text h2 {
-        text-align: left;
-    }
+  /* ADDED: Makes the logo slightly larger on bigger screens */
+  .hero-logo img {
+    max-width: 180px;
+  }
+  .section-layout {
+    flex-direction: row;
+    text-align: left;
+  }
+  .section-layout > div {
+    flex: 1;
+  }
+  .section-layout.reverse {
+    flex-direction: row-reverse;
+  }
+  .story-text,
+  .features-text {
+    text-align: left;
+  }
+  .story-text h2,
+  .features-text h2 {
+    text-align: left;
+  }
+  .image-gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 20px;
+  }
 
- .form-layout {
-        flex-direction: row-reverse;
-        gap: 60px; /* Thoda zyada gap de rahe hain, accha dikhega */
-    }
-    
-    /* YEH NAYA CODE HAI JO MAGIC KAREGA */
-    .form-layout > form {
-        flex: 2; /* Form ko double space dega */
-    }
-    .form-layout > .payment-instructions {
-        flex: 1; /* Payment instructions ko single space dega */
-    }
-    
-    .payment-instructions {
-        text-align: left;
-    }
+  .form-layout {
+    flex-direction: row-reverse;
+    gap: 60px; /* Thoda zyada gap de rahe hain, accha dikhega */
+  }
 
-    .testimonials {
-        flex-direction: row;
-    }
-    .container {
-   
+  /* YEH NAYA CODE HAI JO MAGIC KAREGA */
+  .form-layout > form {
+    flex: 2; /* Form ko double space dega */
+  }
+  .form-layout > .payment-instructions {
+    flex: 1; /* Payment instructions ko single space dega */
+  }
+
+  .payment-instructions {
+    text-align: left;
+  }
+
+  .testimonials {
+    flex-direction: row;
+  }
+  .container {
     padding: 60px 0;
-}
-   
+  }
 }

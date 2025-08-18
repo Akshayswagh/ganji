@@ -21,6 +21,7 @@
 
     <!-- Your Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="lightbox/css/lightbox.min.css" />
   </head>
   <body>
     <!-- 1. Hero Section -->
@@ -113,9 +114,116 @@
         </div>
       </section>
 
+      <!-- START: FINAL PREMIUM EXPERIENCE SECTION -->
+      <section id="experience" class="experience-section">
+        <div class="container">
+          <h2>The Premium Experience: What You'll Receive</h2>
+          <p class="section-subtitle">
+            Every Ganji wallet arrives in our signature heritage gift box, ready
+            to impress. Click on any image to see it in detail.
+          </p>
+          <div class="image-gallery">
+            <!-- Image 1: The Full Package -->
+            <a
+              href="assets/1.jpg"
+              data-lightbox="ganji-gallery"
+              data-title="Signature Heritage Gift Box"
+            >
+              <img
+                src="assets/1.jpg"
+                alt="Ganji wallet in its premium heritage gift box"
+              />
+            </a>
+
+            <!-- Image 2: Craftsmanship Detail -->
+            <a
+              href="assets/7.jpeg"
+              data-lightbox="ganji-gallery"
+              data-title="Exquisite Embossing & Hand-Stitched Finish"
+            >
+              <img
+                src="assets/7.jpeg"
+                alt="Close-up of the wallet's leather and stitching detail"
+              />
+            </a>
+
+            <!-- Image 3: Functional Interior -->
+            <a
+              href="assets/2.jpeg"
+              data-lightbox="ganji-gallery"
+              data-title="Spacious Card & ID Compartments"
+            >
+              <img
+                src="assets/2.jpeg"
+                alt="Interior view of the wallet showing multiple card slots"
+              />
+            </a>
+
+            <!-- Image 4: Ready for Daily Use -->
+            <a
+              href="assets/4.jpeg"
+              data-lightbox="ganji-gallery"
+              data-title="Designed for Everyday Elegance"
+            >
+              <img
+                src="assets/4.jpeg"
+                alt="Ganji wallet filled with cash and cards, next to its gift box"
+              />
+            </a>
+            <!-- Image 5: Ready for Daily Use -->
+            <a
+              href="assets/5.jpeg"
+              data-lightbox="ganji-gallery"
+              data-title="Designed for Everyday Elegance"
+            >
+              <img
+                src="assets/5.jpeg"
+                alt="Ganji wallet filled with cash and cards, next to its gift box"
+              />
+            </a>
+            <!-- Image 6: Ready for Daily Use -->
+            <a
+              href="assets/3.jpeg"
+              data-lightbox="ganji-gallery"
+              data-title="Designed for Everyday Elegance"
+            >
+              <img
+                src="assets/3.jpeg"
+                alt="Ganji wallet filled with cash and cards, next to its gift box"
+              />
+            </a>
+         
+            <!-- Image 8: Ready for Daily Use -->
+            <a
+              href="assets/11.jpeg"
+              data-lightbox="ganji-gallery"
+              data-title="Designed for Everyday Elegance"
+            >
+              <img
+                src="assets/11.jpeg"
+                alt="Ganji wallet filled with cash and cards, next to its gift box"
+              />
+            </a>
+            <!-- Image 9: Ready for Daily Use -->
+            <a
+              href="assets/6.jpg"
+              data-lightbox="ganji-gallery"
+              data-title="Designed for Everyday Elegance"
+            >
+              <img
+                src="assets/6.jpg"
+                alt="Ganji wallet filled with cash and cards, next to its gift box"
+              />
+            </a>
+          
+          </div>
+        </div>
+      </section>
+      <!-- END: FINAL PREMIUM EXPERIENCE SECTION -->
+
       <!-- 5. Order Form Section -->
       <section id="order-form" class="order-form-section">
-        <div class="container ">
+        <div class="container">
           <h2>Complete Your Order</h2>
           <div class="form-layout">
             <form id="ganji-order-form">
@@ -260,7 +368,13 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
 
-    <!-- Your Custom JavaScript -->
+    <!-- STEP 1: ADD JQUERY (Yeh Lightbox ke liye zaroori hai) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- STEP 2: Lightbox ka script (Yeh jQuery ke BAAD aana chahiye) -->
+    <script src="lightbox/js/lightbox.min.js"></script>
+
+    <!-- STEP 3: Aapka custom script -->
     <script src="script.js"></script>
 
     <!-- START: WhatsApp Float Icon -->
