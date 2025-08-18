@@ -1,43 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS with your Public Key
-    // Get your key from https://dashboard.emailjs.com/admin/account
-    emailjs.init('YOUR_PUBLIC_KEY');
+    
+    // --- FANCYBOX INITIALIZATION ---
+    Fancybox.bind("[data-fancybox='ganji-gallery']", {});
 
+    // --- GOOGLE SHEETS FORM SUBMISSION LOGIC ---
     const orderForm = document.getElementById('ganji-order-form');
-    const formStatus = document.getElementById('form-status');
-    const submitButton = orderForm.querySelector('.submit-button');
+    if (orderForm) {
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    orderForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the default form submission
+            const formStatus = document.getElementById('form-status');
+            const submitButton = this.querySelector('.submit-button');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzD5soOnP5f_RloH0MKmbSPs3QBI3mF1sR7n5H1_EAs-Y6y7RVAdpOnNZgaKRXHlKJ2/exec';
 
-        // --- 1. GET YOUR KEYS FROM EMAILJS.COM ---
-        // Replace with your actual Service ID and Template ID
-        const serviceID = 'YOUR_SERVICE_ID';
-        const templateID = 'YOUR_TEMPLATE_ID';
-        // ------------------------------------------
+            submitButton.disabled = true;
+            submitButton.innerText = 'Submitting...';
+            formStatus.innerText = 'Please wait, your order is being placed...';
+            formStatus.style.color = '#333';
 
-        // Update UI to show submission is in progress
-        submitButton.disabled = true;
-        submitButton.innerText = 'Submitting...';
-        formStatus.innerText = 'Please wait while we confirm your order.';
-        formStatus.style.color = '#333';
-
-        // Use EmailJS to send the form data
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                // On Success
-                formStatus.innerText = 'Thank You! Your order has been placed successfully.';
-                formStatus.style.color = 'green';
-                submitButton.innerText = 'Order Placed!';
-                orderForm.reset(); // Clear the form fields
+            fetch(scriptURL, { method: 'POST', body: new FormData(orderForm) })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.innerText = 'Thank You! Your order has been placed successfully.';
+                    formStatus.style.color = 'green';
+                    submitButton.innerText = 'Order Placed!';
+                    orderForm.reset(); // Form ko clear kar dein
+                } else {
+                    // Agar server se koi error aaye to
+                    throw new Error('Something went wrong on the server.');
+                }
             })
-            .catch((err) => {
-                // On Failure
+            .catch(error => {
                 formStatus.innerText = 'Oops! Something went wrong. Please try again.';
                 formStatus.style.color = 'red';
-                submitButton.disabled = false; // Re-enable button
+                submitButton.disabled = false;
                 submitButton.innerText = 'Confirm My Order';
-                console.error('EmailJS Error:', JSON.stringify(err));
+                console.error('Error!', error.message);
             });
-    });
+        });
+    }
 });

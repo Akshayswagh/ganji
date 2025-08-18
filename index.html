@@ -21,7 +21,11 @@
 
     <!-- Your Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="lightbox/css/lightbox.min.css" />
+    <!-- ADD THIS LINE FOR FANCYBOX STYLES -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
   </head>
   <body>
     <!-- 1. Hero Section -->
@@ -119,13 +123,23 @@
         <div class="container">
           <h2>The Premium Experience: What You'll Receive</h2>
           <p class="section-subtitle">
-            Every Ganji wallet arrives in our signature heritage gift box, ready to impress. 
+            Every Ganji wallet arrives in our signature heritage gift box, ready
+            to impress.
             <strong>Click the image below to view the full gallery.</strong>
           </p>
 
-          <div class="gallery-container">
+                 <div class="gallery-container">
+            
             <!-- 1. Yeh Main Image Hai Jo Page Par Dikhegi -->
-            <a href="assets/1.jpg" data-lightbox="ganji-gallery" data-title="Signature Heritage Gift Box" class="main-gallery-image">
+            <a href="assets/1.jpg" 
+               data-fancybox="ganji-gallery" 
+               data-caption='
+                  <div class="fancybox-caption-content">
+                    <h2>Our Signature Heritage Gift Box</h2>
+                    <p>The first impression matters. Your Ganji wallet comes in a premium box, making it the perfect gift.</p>
+                  </div>
+               '
+               class="main-gallery-image">
               <img src="assets/1.jpg" alt="Ganji wallet in its premium heritage gift box">
               <div class="overlay">
                 <i class="fas fa-search-plus"></i>
@@ -135,21 +149,77 @@
 
             <!-- 2. Yeh Baaki Images Hain Jo Chhipi Rahengi (Hidden) -->
             <div class="hidden-gallery-links">
-              <a href="assets/7.jpeg" data-lightbox="ganji-gallery" data-title="Exquisite Embossing & Hand-Stitched Finish"></a>
-              <a href="assets/2.jpeg" data-lightbox="ganji-gallery" data-title="Spacious Card & ID Compartments"></a>
-              <a href="assets/4.jpeg" data-lightbox="ganji-gallery" data-title="Designed for Everyday Elegance"></a>
-              <a href="assets/5.jpeg" data-lightbox="ganji-gallery" data-title="Designed for Everyday Elegance"></a>
-              <a href="assets/3.jpeg" data-lightbox="ganji-gallery" data-title="Designed for Everyday Elegance"></a>
-              <a href="assets/11.jpeg" data-lightbox="ganji-gallery" data-title="Designed for Everyday Elegance"></a>
-              <a href="assets/6.jpg" data-lightbox="ganji-gallery" data-title="Designed for Everyday Elegance"></a>
-              <!-- Aap yahan aur bhi images add kar sakte hain -->
+              <a href="assets/7.jpeg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Exquisite Craftsmanship</h2>
+                        <p>Notice the fine embossing and durable hand-stitched finish that promises longevity and style.</p>
+                    </div>
+                 '></a>
+
+              <a href="assets/2.jpeg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Designed for Functionality</h2>
+                        <p>With multiple card slots and a dedicated ID window, it’s built for the modern man.</p>
+                    </div>
+                 '></a>
+
+              <a href="assets/4.jpeg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Elegance in Your Pocket</h2>
+                        <p>Slim, stylish, and practical. The Ganji wallet holds everything you need without the bulk.</p>
+                    </div>
+                 '></a>
+
+              <a href="assets/5.jpeg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Elegance in Your Pocket</h2>
+                        <p>Slim, stylish, and practical. The Ganji wallet holds everything you need without the bulk.</p>
+                    </div>
+                 '></a>
+
+              <a href="assets/3.jpeg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Elegance in Your Pocket</h2>
+                        <p>Slim, stylish, and practical. The Ganji wallet holds everything you need without the bulk.</p>
+                    </div>
+                 '></a>
+
+              <a href="assets/11.jpeg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Elegance in Your Pocket</h2>
+                        <p>Slim, stylish, and practical. The Ganji wallet holds everything you need without the bulk.</p>
+                    </div>
+                 '></a>
+
+              <a href="assets/6.jpg" 
+                 data-fancybox="ganji-gallery"
+                 data-caption='
+                    <div class="fancybox-caption-content">
+                        <h2>Elegance in Your Pocket</h2>
+                        <p>Slim, stylish, and practical. The Ganji wallet holds everything you need without the bulk.</p>
+                    </div>
+                 '></a>
+
+              
             </div>
             
           </div>
+
         </div>
       </section>
       <!-- END: FINAL PREMIUM EXPERIENCE SECTION -->
-
 
       <!-- 5. Order Form Section -->
       <section id="order-form" class="order-form-section">
@@ -292,17 +362,9 @@
       </div>
     </footer>
 
-    <!-- EmailJS SDK -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-
-    <!-- STEP 1: ADD JQUERY (Yeh Lightbox ke liye zaroori hai) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- STEP 2: Lightbox ka script (Yeh jQuery ke BAAD aana chahiye) -->
-    <script src="lightbox/js/lightbox.min.js"></script>
+ 
+    <!-- ADD THIS LINE FOR FANCYBOX SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
     <!-- STEP 3: Aapka custom script -->
     <script src="script.js"></script>

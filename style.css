@@ -245,6 +245,30 @@ video {
 .hidden-gallery-links {
     display: none; /* Baaki sabhi image links ko page se chhipa dega */
 }
+
+
+
+/* --- Fancybox Custom Caption Styling --- */
+.fancybox__caption .fancybox-caption-content {
+    padding: 15px;
+    text-align: left;
+    color: #eee;
+}
+
+.fancybox__caption .fancybox-caption-content h2 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.fancybox__caption .fancybox-caption-content p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
 /* --- 5. Order Form Section --- */
 .form-layout {
   display: flex;
