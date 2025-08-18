@@ -33,6 +33,7 @@ body {
     padding: 30px 0;
 }
 
+
 h1, h2 {
     font-family: var(--font-heading);
     color: var(--primary-brown);
@@ -348,12 +349,19 @@ img, video {
         text-align: left;
     }
 
-    .form-layout {
+ .form-layout {
         flex-direction: row-reverse;
+        gap: 60px; /* Thoda zyada gap de rahe hain, accha dikhega */
     }
-    .form-layout > div {
-        flex: 1;
+    
+    /* YEH NAYA CODE HAI JO MAGIC KAREGA */
+    .form-layout > form {
+        flex: 2; /* Form ko double space dega */
     }
+    .form-layout > .payment-instructions {
+        flex: 1; /* Payment instructions ko single space dega */
+    }
+    
     .payment-instructions {
         text-align: left;
     }
