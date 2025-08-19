@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
+
     <!-- SEO UPDATE: Title Tag - The most important SEO element -->
     <title>
       Ganji™ Men's Heritage Leather Wallet | Buy Premium Wallets Online India
@@ -264,11 +265,17 @@
               </div>
               <div class="form-group">
                 <label for="mobileNumber">Mobile Number</label>
+
                 <input
                   type="tel"
-                  id="mobileNumber"
+                  class="form-control"
+                  id="phoneCall"
                   name="mobile_number"
+                  id="mobileNumber"
                   required
+                  pattern="^(?:\+?91[\s-]?)?(?:[6-9]\d{9})$"
+                  minlength="10"
+                  maxlength="13"
                 />
               </div>
               <div class="form-group">
